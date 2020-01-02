@@ -1,0 +1,498 @@
+﻿@model IEnumerable<EmapaiPrueba.Models.ClienteExterno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-responsive">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RES_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CI_RUC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TCL_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_APELLIDOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_NOMBRES)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_NOMBRE_EMPRESA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CALLEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_NUMERODIR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CALLES)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_TELEFONO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_EMAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LUGAR_TRABAJO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_TELF_TRAB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_EXTENSION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_PROFESION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_ARTESANAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_ESPECIAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LINEA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_NIVEL_INSTRUCCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_FAX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CIUDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_FECHA_NACIMIENTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_FECHA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_USER)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_DOC_TIPO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_SERIE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_AUTORIZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_DEVOL_IVA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_FECHA_VALIDEZ1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_IVA_RET)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_IVA_COD_RET)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_FUENTE_RET)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_NACIONALIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_EST_CIVIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SEXO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SECTOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_DIRECCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CELULAR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_HIJOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_IESS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_RECORD_POL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LIBRETA_MIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CRG_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LICENCIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_TIP_SANGRE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_VIVIENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_TIP_VIVIENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_AGUA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LUZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_ALCANTARILLADO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SER_HIGIENICO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_BANCO_CUENTA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_BANCO_TIPO_CUENTA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_BANCO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_SERIE_ESTABLECIMIENTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_SERIE_PUNTO_EMISION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_AUTORIZACION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_FECHA_VALIDEZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_IVA_PORC_SERV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_IVA_COD_SERV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_IVA_PORC_BIEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_IVA_COD_BIEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_RENTA_SERV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_SRI_RET_RENTA_BIEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_FACTURA_DESDE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_FACTURA_HASTA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_REPRESENTANTE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_LINEA_DESCRIPCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_TIPO_CONTRIBUYENTE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_EVENTUAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CORREO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CODIGO_BANCO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CI_ALTERNATIVO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CUENTA_CONCEPTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLE_CLAVE_CATASTRAL_MUNICIPIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cle_parroquia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cle_canton)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cle_referencia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RES_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CI_RUC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCL_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_APELLIDOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_NOMBRES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_NOMBRE_EMPRESA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CALLEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_NUMERODIR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CALLES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_TELEFONO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LUGAR_TRABAJO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_TELF_TRAB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_EXTENSION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_PROFESION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_ARTESANAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_ESPECIAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LINEA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_NIVEL_INSTRUCCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_FAX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CIUDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_FECHA_NACIMIENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_FECHA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_USER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_DOC_TIPO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_SERIE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_AUTORIZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_DEVOL_IVA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_FECHA_VALIDEZ1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_IVA_RET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_IVA_COD_RET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_FUENTE_RET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_NACIONALIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_EST_CIVIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SEXO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SECTOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_DIRECCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CELULAR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_HIJOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_IESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_RECORD_POL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LIBRETA_MIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CRG_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LICENCIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_TIP_SANGRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_VIVIENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_TIP_VIVIENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_AGUA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LUZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_ALCANTARILLADO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SER_HIGIENICO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_BANCO_CUENTA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_BANCO_TIPO_CUENTA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_BANCO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_SERIE_ESTABLECIMIENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_SERIE_PUNTO_EMISION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_AUTORIZACION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_FECHA_VALIDEZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_IVA_PORC_SERV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_IVA_COD_SERV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_IVA_PORC_BIEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_IVA_COD_BIEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_RENTA_SERV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_SRI_RET_RENTA_BIEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_FACTURA_DESDE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_FACTURA_HASTA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_REPRESENTANTE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_LINEA_DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_TIPO_CONTRIBUYENTE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_EVENTUAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CORREO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CODIGO_BANCO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CI_ALTERNATIVO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CUENTA_CONCEPTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLE_CLAVE_CATASTRAL_MUNICIPIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cle_parroquia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cle_canton)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cle_referencia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

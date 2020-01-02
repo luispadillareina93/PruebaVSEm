@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Emapai.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_MIS_CLIENTE_EXTERNO">
+          <Key>
+            <PropertyRef Name="CLE_CI_RUC" />
+          </Key>
+          <Property Name="RES_ID" Type="int" />
+          <Property Name="CLE_CI_RUC" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TCL_ID" Type="int" />
+          <Property Name="CLE_APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CLE_NOMBRES" Type="varchar" MaxLength="49" Nullable="false" />
+          <Property Name="CLE_NOMBRE_EMPRESA" Type="varchar" MaxLength="100" />
+          <Property Name="CLE_CALLEP" Type="varchar" MaxLength="75" />
+          <Property Name="CLE_NUMERODIR" Type="varchar" MaxLength="10" />
+          <Property Name="CLE_CALLES" Type="varchar" MaxLength="75" />
+          <Property Name="CLE_TELEFONO" Type="varchar" MaxLength="30" />
+          <Property Name="CLE_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_LUGAR_TRABAJO" Type="varchar" MaxLength="20" />
+          <Property Name="CLE_TELF_TRAB" Type="varchar" MaxLength="12" />
+          <Property Name="CLE_EXTENSION" Type="varchar" MaxLength="3" />
+          <Property Name="CLE_PROFESION" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_ARTESANAL" Type="bit" />
+          <Property Name="CLE_ESPECIAL" Type="bit" />
+          <Property Name="CLE_LINEA" Type="varchar" MaxLength="100" />
+          <Property Name="CLE_NIVEL_INSTRUCCION" Type="varchar" MaxLength="3" />
+          <Property Name="CLE_FAX" Type="varchar" MaxLength="30" />
+          <Property Name="CLE_CIUDAD" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_FECHA_NACIMIENTO" Type="smalldatetime" />
+          <Property Name="CLE_FECHA" Type="smalldatetime" />
+          <Property Name="CLE_USER" Type="varchar" MaxLength="20" />
+          <Property Name="CLE_DOC_TIPO" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_SRI_SERIE" Type="varchar" MaxLength="10" />
+          <Property Name="CLE_SRI_AUTORIZ" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_SRI_DEVOL_IVA" Type="bit" />
+          <Property Name="CLE_SRI_FECHA_VALIDEZ1" Type="smalldatetime" />
+          <Property Name="CLE_SRI_IVA_RET" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="CLE_SRI_IVA_COD_RET" Type="tinyint" />
+          <Property Name="CLE_SRI_FUENTE_RET" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="CLE_NACIONALIDAD" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_EST_CIVIL" Type="varchar" MaxLength="15" />
+          <Property Name="CLE_SEXO" Type="varchar" MaxLength="15" />
+          <Property Name="CLE_SECTOR" Type="varchar" MaxLength="75" />
+          <Property Name="CLE_DIRECCION" Type="varchar" MaxLength="150" />
+          <Property Name="CLE_CELULAR" Type="varchar" MaxLength="15" />
+          <Property Name="CLE_HIJOS" Type="tinyint" />
+          <Property Name="CLE_IESS" Type="varchar" MaxLength="20" />
+          <Property Name="CLE_RECORD_POL" Type="varchar" MaxLength="80" />
+          <Property Name="CLE_LIBRETA_MIL" Type="varchar" MaxLength="20" />
+          <Property Name="CRG_ID" Type="int" />
+          <Property Name="CLE_LICENCIA" Type="varchar" MaxLength="2" />
+          <Property Name="CLE_TIP_SANGRE" Type="varchar" MaxLength="10" />
+          <Property Name="CLE_VIVIENDA" Type="varchar" MaxLength="20" />
+          <Property Name="CLE_TIP_VIVIENDA" Type="varchar" MaxLength="20" />
+          <Property Name="CLE_AGUA" Type="varchar" MaxLength="2" />
+          <Property Name="CLE_LUZ" Type="varchar" MaxLength="2" />
+          <Property Name="CLE_ALCANTARILLADO" Type="varchar" MaxLength="2" />
+          <Property Name="CLE_SER_HIGIENICO" Type="varchar" MaxLength="2" />
+          <Property Name="CLE_BANCO_CUENTA" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_BANCO_TIPO_CUENTA" Type="int" />
+          <Property Name="CLE_BANCO" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_SRI_SERIE_ESTABLECIMIENTO" Type="varchar" MaxLength="3" />
+          <Property Name="CLE_SRI_SERIE_PUNTO_EMISION" Type="varchar" MaxLength="3" />
+          <Property Name="CLE_SRI_AUTORIZACION" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_SRI_FECHA_VALIDEZ" Type="varchar" MaxLength="7" />
+          <Property Name="CLE_SRI_RET_IVA_PORC_SERV" Type="tinyint" />
+          <Property Name="CLE_SRI_RET_IVA_COD_SERV" Type="char" MaxLength="1" />
+          <Property Name="CLE_SRI_RET_IVA_PORC_BIEN" Type="tinyint" />
+          <Property Name="CLE_SRI_RET_IVA_COD_BIEN" Type="char" MaxLength="1" />
+          <Property Name="CLE_SRI_RET_RENTA_SERV" Type="tinyint" />
+          <Property Name="CLE_SRI_RET_RENTA_BIEN" Type="tinyint" />
+          <Property Name="CLE_FACTURA_DESDE" Type="int" />
+          <Property Name="CLE_FACTURA_HASTA" Type="int" />
+          <Property Name="CLE_REPRESENTANTE" Type="varchar" MaxLength="255" />
+          <Property Name="CLE_LINEA_DESCRIPCION" Type="varchar" MaxLength="255" />
+          <Property Name="CLE_TIPO_CONTRIBUYENTE" Type="varchar" MaxLength="150" />
+          <Property Name="CLE_EVENTUAL" Type="tinyint" />
+          <Property Name="CLE_CORREO" Type="varchar" MaxLength="255" />
+          <Property Name="CLE_CODIGO_BANCO" Type="varchar" MaxLength="10" />
+          <Property Name="CLE_CI_ALTERNATIVO" Type="varchar" MaxLength="15" />
+          <Property Name="CLE_CUENTA_CONCEPTO" Type="varchar" MaxLength="50" />
+          <Property Name="CLE_CLAVE_CATASTRAL_MUNICIPIO" Type="char" MaxLength="15" />
+          <Property Name="cle_parroquia" Type="nvarchar(max)" />
+          <Property Name="cle_canton" Type="nvarchar(max)" />
+          <Property Name="cle_referencia" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="EmapaiStoreContainer">
+          <EntitySet Name="TBL_MIS_CLIENTE_EXTERNO" EntityType="Self.TBL_MIS_CLIENTE_EXTERNO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Emapai" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClienteExterno">
+          <Key>
+            <PropertyRef Name="CLE_CI_RUC" />
+          </Key>
+          <Property Name="RES_ID" Type="Int32" />
+          <Property Name="CLE_CI_RUC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TCL_ID" Type="Int32" />
+          <Property Name="CLE_APELLIDOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CLE_NOMBRES" Type="String" MaxLength="49" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CLE_NOMBRE_EMPRESA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CALLEP" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_NUMERODIR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CALLES" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_TELEFONO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_LUGAR_TRABAJO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_TELF_TRAB" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_EXTENSION" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_PROFESION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_ARTESANAL" Type="Boolean" />
+          <Property Name="CLE_ESPECIAL" Type="Boolean" />
+          <Property Name="CLE_LINEA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_NIVEL_INSTRUCCION" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_FECHA_NACIMIENTO" Type="DateTime" Precision="0" />
+          <Property Name="CLE_FECHA" Type="DateTime" Precision="0" />
+          <Property Name="CLE_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_DOC_TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_SERIE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_AUTORIZ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_DEVOL_IVA" Type="Boolean" />
+          <Property Name="CLE_SRI_FECHA_VALIDEZ1" Type="DateTime" Precision="0" />
+          <Property Name="CLE_SRI_IVA_RET" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CLE_SRI_IVA_COD_RET" Type="Byte" />
+          <Property Name="CLE_SRI_FUENTE_RET" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CLE_NACIONALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_EST_CIVIL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SEXO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SECTOR" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_DIRECCION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CELULAR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_HIJOS" Type="Byte" />
+          <Property Name="CLE_IESS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_RECORD_POL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_LIBRETA_MIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CRG_ID" Type="Int32" />
+          <Property Name="CLE_LICENCIA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_TIP_SANGRE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_VIVIENDA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_TIP_VIVIENDA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_AGUA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_LUZ" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_ALCANTARILLADO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SER_HIGIENICO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_BANCO_CUENTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_BANCO_TIPO_CUENTA" Type="Int32" />
+          <Property Name="CLE_BANCO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_SERIE_ESTABLECIMIENTO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_SERIE_PUNTO_EMISION" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_AUTORIZACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_FECHA_VALIDEZ" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_SRI_RET_IVA_PORC_SERV" Type="Byte" />
+          <Property Name="CLE_SRI_RET_IVA_COD_SERV" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CLE_SRI_RET_IVA_PORC_BIEN" Type="Byte" />
+          <Property Name="CLE_SRI_RET_IVA_COD_BIEN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CLE_SRI_RET_RENTA_SERV" Type="Byte" />
+          <Property Name="CLE_SRI_RET_RENTA_BIEN" Type="Byte" />
+          <Property Name="CLE_FACTURA_DESDE" Type="Int32" />
+          <Property Name="CLE_FACTURA_HASTA" Type="Int32" />
+          <Property Name="CLE_REPRESENTANTE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_LINEA_DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_TIPO_CONTRIBUYENTE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_EVENTUAL" Type="Byte" />
+          <Property Name="CLE_CORREO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CODIGO_BANCO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CI_ALTERNATIVO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CUENTA_CONCEPTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLE_CLAVE_CATASTRAL_MUNICIPIO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="cle_parroquia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cle_canton" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cle_referencia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DbConexion" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClienteExternoes" EntityType="Emapai.ClienteExterno" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmapaiStoreContainer" CdmEntityContainer="DbConexion">
+          <EntitySetMapping Name="ClienteExternoes">
+            <EntityTypeMapping TypeName="Emapai.ClienteExterno">
+              <MappingFragment StoreEntitySet="TBL_MIS_CLIENTE_EXTERNO">
+                <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+                <ScalarProperty Name="CLE_CI_RUC" ColumnName="CLE_CI_RUC" />
+                <ScalarProperty Name="TCL_ID" ColumnName="TCL_ID" />
+                <ScalarProperty Name="CLE_APELLIDOS" ColumnName="CLE_APELLIDOS" />
+                <ScalarProperty Name="CLE_NOMBRES" ColumnName="CLE_NOMBRES" />
+                <ScalarProperty Name="CLE_NOMBRE_EMPRESA" ColumnName="CLE_NOMBRE_EMPRESA" />
+                <ScalarProperty Name="CLE_CALLEP" ColumnName="CLE_CALLEP" />
+                <ScalarProperty Name="CLE_NUMERODIR" ColumnName="CLE_NUMERODIR" />
+                <ScalarProperty Name="CLE_CALLES" ColumnName="CLE_CALLES" />
+                <ScalarProperty Name="CLE_TELEFONO" ColumnName="CLE_TELEFONO" />
+                <ScalarProperty Name="CLE_EMAIL" ColumnName="CLE_EMAIL" />
+                <ScalarProperty Name="CLE_LUGAR_TRABAJO" ColumnName="CLE_LUGAR_TRABAJO" />
+                <ScalarProperty Name="CLE_TELF_TRAB" ColumnName="CLE_TELF_TRAB" />
+                <ScalarProperty Name="CLE_EXTENSION" ColumnName="CLE_EXTENSION" />
+                <ScalarProperty Name="CLE_PROFESION" ColumnName="CLE_PROFESION" />
+                <ScalarProperty Name="CLE_ARTESANAL" ColumnName="CLE_ARTESANAL" />
+                <ScalarProperty Name="CLE_ESPECIAL" ColumnName="CLE_ESPECIAL" />
+                <ScalarProperty Name="CLE_LINEA" ColumnName="CLE_LINEA" />
+                <ScalarProperty Name="CLE_NIVEL_INSTRUCCION" ColumnName="CLE_NIVEL_INSTRUCCION" />
+                <ScalarProperty Name="CLE_FAX" ColumnName="CLE_FAX" />
+                <ScalarProperty Name="CLE_CIUDAD" ColumnName="CLE_CIUDAD" />
+                <ScalarProperty Name="CLE_FECHA_NACIMIENTO" ColumnName="CLE_FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CLE_FECHA" ColumnName="CLE_FECHA" />
+                <ScalarProperty Name="CLE_USER" ColumnName="CLE_USER" />
+                <ScalarProperty Name="CLE_DOC_TIPO" ColumnName="CLE_DOC_TIPO" />
+                <ScalarProperty Name="CLE_SRI_SERIE" ColumnName="CLE_SRI_SERIE" />
+                <ScalarProperty Name="CLE_SRI_AUTORIZ" ColumnName="CLE_SRI_AUTORIZ" />
+                <ScalarProperty Name="CLE_SRI_DEVOL_IVA" ColumnName="CLE_SRI_DEVOL_IVA" />
+                <ScalarProperty Name="CLE_SRI_FECHA_VALIDEZ1" ColumnName="CLE_SRI_FECHA_VALIDEZ1" />
+                <ScalarProperty Name="CLE_SRI_IVA_RET" ColumnName="CLE_SRI_IVA_RET" />
+                <ScalarProperty Name="CLE_SRI_IVA_COD_RET" ColumnName="CLE_SRI_IVA_COD_RET" />
+                <ScalarProperty Name="CLE_SRI_FUENTE_RET" ColumnName="CLE_SRI_FUENTE_RET" />
+                <ScalarProperty Name="CLE_NACIONALIDAD" ColumnName="CLE_NACIONALIDAD" />
+                <ScalarProperty Name="CLE_EST_CIVIL" ColumnName="CLE_EST_CIVIL" />
+                <ScalarProperty Name="CLE_SEXO" ColumnName="CLE_SEXO" />
+                <ScalarProperty Name="CLE_SECTOR" ColumnName="CLE_SECTOR" />
+                <ScalarProperty Name="CLE_DIRECCION" ColumnName="CLE_DIRECCION" />
+                <ScalarProperty Name="CLE_CELULAR" ColumnName="CLE_CELULAR" />
+                <ScalarProperty Name="CLE_HIJOS" ColumnName="CLE_HIJOS" />
+                <ScalarProperty Name="CLE_IESS" ColumnName="CLE_IESS" />
+                <ScalarProperty Name="CLE_RECORD_POL" ColumnName="CLE_RECORD_POL" />
+                <ScalarProperty Name="CLE_LIBRETA_MIL" ColumnName="CLE_LIBRETA_MIL" />
+                <ScalarProperty Name="CRG_ID" ColumnName="CRG_ID" />
+                <ScalarProperty Name="CLE_LICENCIA" ColumnName="CLE_LICENCIA" />
+                <ScalarProperty Name="CLE_TIP_SANGRE" ColumnName="CLE_TIP_SANGRE" />
+                <ScalarProperty Name="CLE_VIVIENDA" ColumnName="CLE_VIVIENDA" />
+                <ScalarProperty Name="CLE_TIP_VIVIENDA" ColumnName="CLE_TIP_VIVIENDA" />
+                <ScalarProperty Name="CLE_AGUA" ColumnName="CLE_AGUA" />
+                <ScalarProperty Name="CLE_LUZ" ColumnName="CLE_LUZ" />
+                <ScalarProperty Name="CLE_ALCANTARILLADO" ColumnName="CLE_ALCANTARILLADO" />
+                <ScalarProperty Name="CLE_SER_HIGIENICO" ColumnName="CLE_SER_HIGIENICO" />
+                <ScalarProperty Name="CLE_BANCO_CUENTA" ColumnName="CLE_BANCO_CUENTA" />
+                <ScalarProperty Name="CLE_BANCO_TIPO_CUENTA" ColumnName="CLE_BANCO_TIPO_CUENTA" />
+                <ScalarProperty Name="CLE_BANCO" ColumnName="CLE_BANCO" />
+                <ScalarProperty Name="CLE_SRI_SERIE_ESTABLECIMIENTO" ColumnName="CLE_SRI_SERIE_ESTABLECIMIENTO" />
+                <ScalarProperty Name="CLE_SRI_SERIE_PUNTO_EMISION" ColumnName="CLE_SRI_SERIE_PUNTO_EMISION" />
+                <ScalarProperty Name="CLE_SRI_AUTORIZACION" ColumnName="CLE_SRI_AUTORIZACION" />
+                <ScalarProperty Name="CLE_SRI_FECHA_VALIDEZ" ColumnName="CLE_SRI_FECHA_VALIDEZ" />
+                <ScalarProperty Name="CLE_SRI_RET_IVA_PORC_SERV" ColumnName="CLE_SRI_RET_IVA_PORC_SERV" />
+                <ScalarProperty Name="CLE_SRI_RET_IVA_COD_SERV" ColumnName="CLE_SRI_RET_IVA_COD_SERV" />
+                <ScalarProperty Name="CLE_SRI_RET_IVA_PORC_BIEN" ColumnName="CLE_SRI_RET_IVA_PORC_BIEN" />
+                <ScalarProperty Name="CLE_SRI_RET_IVA_COD_BIEN" ColumnName="CLE_SRI_RET_IVA_COD_BIEN" />
+                <ScalarProperty Name="CLE_SRI_RET_RENTA_SERV" ColumnName="CLE_SRI_RET_RENTA_SERV" />
+                <ScalarProperty Name="CLE_SRI_RET_RENTA_BIEN" ColumnName="CLE_SRI_RET_RENTA_BIEN" />
+                <ScalarProperty Name="CLE_FACTURA_DESDE" ColumnName="CLE_FACTURA_DESDE" />
+                <ScalarProperty Name="CLE_FACTURA_HASTA" ColumnName="CLE_FACTURA_HASTA" />
+                <ScalarProperty Name="CLE_REPRESENTANTE" ColumnName="CLE_REPRESENTANTE" />
+                <ScalarProperty Name="CLE_LINEA_DESCRIPCION" ColumnName="CLE_LINEA_DESCRIPCION" />
+                <ScalarProperty Name="CLE_TIPO_CONTRIBUYENTE" ColumnName="CLE_TIPO_CONTRIBUYENTE" />
+                <ScalarProperty Name="CLE_EVENTUAL" ColumnName="CLE_EVENTUAL" />
+                <ScalarProperty Name="CLE_CORREO" ColumnName="CLE_CORREO" />
+                <ScalarProperty Name="CLE_CODIGO_BANCO" ColumnName="CLE_CODIGO_BANCO" />
+                <ScalarProperty Name="CLE_CI_ALTERNATIVO" ColumnName="CLE_CI_ALTERNATIVO" />
+                <ScalarProperty Name="CLE_CUENTA_CONCEPTO" ColumnName="CLE_CUENTA_CONCEPTO" />
+                <ScalarProperty Name="CLE_CLAVE_CATASTRAL_MUNICIPIO" ColumnName="CLE_CLAVE_CATASTRAL_MUNICIPIO" />
+                <ScalarProperty Name="cle_parroquia" ColumnName="cle_parroquia" />
+                <ScalarProperty Name="cle_canton" ColumnName="cle_canton" />
+                <ScalarProperty Name="cle_referencia" ColumnName="cle_referencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
